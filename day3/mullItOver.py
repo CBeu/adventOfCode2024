@@ -24,10 +24,9 @@ class mullItOver:
         return int(match[0]) * int(match[1])
     
     def calculateMatches(self):
-        if len(self.matches) > 0:
+        if len(self.parseLines()) > 0:
             return sum([self.calculateMul(match) for match in self.matches])
         return 0
     
 sample = mullItOver("day3/input.txt")
-sample.parseLines()
 print(sample.calculateMatches())
